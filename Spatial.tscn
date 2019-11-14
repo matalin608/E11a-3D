@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://BlockLarge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BlockSlope.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BlockLevel.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.32549, 0.490196, 0.223529, 1 )
@@ -32,3 +34,9 @@ fov = 71.6905
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
 
 [node name="BlockLarge2" parent="." instance=ExtResource( 1 )]
+
+[node name="BlockSlope" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
+
+[node name="BlockLevel" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1, 1 )
