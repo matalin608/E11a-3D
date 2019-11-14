@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://BlockLarge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://BlockSlope.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BlockLevel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BlockHexa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://BridgeRamp.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.32549, 0.490196, 0.223529, 1 )
@@ -27,7 +29,7 @@ material/0 = null
 shape = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, -0.00736475, 2.81491, 6.25694 )
+transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, -0.00736475, 3.31491, 6.75694 )
 fov = 71.6905
 
 [node name="BlockLarge" parent="." instance=ExtResource( 1 )]
@@ -40,3 +42,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1 )
 
 [node name="BlockLevel" parent="." instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1, 1 )
+
+[node name="BlockHexa" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.68, 2 )
+
+[node name="BridgeRamp" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1, 2 )
