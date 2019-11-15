@@ -10,7 +10,7 @@ height = 1.0
 albedo_color = Color( 0.517647, 0.466667, 0.698039, 1 )
 
 [sub_resource type="SphereShape" id=3]
-radius = 0.5
+radius = 0.25
 
 [node name="Character" type="KinematicBody"]
 script = ExtResource( 1 )
