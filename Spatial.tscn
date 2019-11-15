@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://BlockLarge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://BlockSlope.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BlockLevel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://BlockHexa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://BridgeRamp.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.32549, 0.490196, 0.223529, 1 )
@@ -17,6 +18,7 @@ size = Vector2( 10, 10 )
 points = PoolVector3Array( 5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, -5 )
 
 [node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5 )
 
 [node name="Ground" type="StaticBody" parent="."]
 
@@ -29,8 +31,8 @@ material/0 = null
 shape = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, -0.00736475, 3.31491, 6.75694 )
-fov = 71.6905
+transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 3.5, 6 )
+fov = 38.3395
 
 [node name="BlockLarge" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
@@ -47,4 +49,10 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 1, 1
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.68, 2 )
 
 [node name="BridgeRamp" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.8, 0.5, 2 )
+
+[node name="BridgeRamp2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 1, 2 )
+
+[node name="Character" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, 1 )
